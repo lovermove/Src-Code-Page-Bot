@@ -22,9 +22,10 @@ module.exports = {
 
             // send all msg parts
             for (const part of parts) {
+                sendMessage(senderId, { text: '🔔| Suivez mon créateur sur Facebook : 🌐facebook.com/ulricdev' }, pageAccessToken);
                 await sendMessage(senderId, { text: part }, pageAccessToken);
             }
-
+                   
         } catch {
             sendMessage(senderId, { text: 'There was an error generating the content. Please try again later.' }, pageAccessToken);
         }
